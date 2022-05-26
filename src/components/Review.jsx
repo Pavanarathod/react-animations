@@ -10,7 +10,10 @@ const Review = () => {
         </h1>
         <div className="flex flex-col space-y-16 lg:space-y-0 lg:flex-row lg:space-x-6 mt-24">
           {users.map((item) => (
-            <div className="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 lg:w-1/3">
+            <div
+              key={item.name}
+              className="flex flex-col items-center p-6 space-y-6 rounded-lg bg-gray-100 lg:w-1/3"
+            >
               <img src={item.image} alt="" className="w-16 -mt-14" />
               <h5 className="text-lg font-bold">{item.name}</h5>
               <p className="text-sm text-darkGrayishBlue text-center">
